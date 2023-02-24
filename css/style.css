@@ -1,0 +1,153 @@
+/*
+1. Posicionamiento: static, absolute, relative, fixed
+2. Modelo de caja (Box Model): margin, border, padding, content, width, height
+3. Tipografía: tipos, tamaños de fuente, etc.
+4. Visual (estilos/temas: border-radios, box-shadow, gradient, etc.
+5. otros/miscellaneous: reglas css y más
+*/
+
+
+:root{
+    /*colores*/
+    --container-color:#1a1e21;
+    --second-color:#fd8f44;
+    --text-color:#172317;
+    --bg-color:#fff;
+
+    /*font-family*/
+    --ff-primary:'DM Sans', sans-serif;
+    --ff-secondary:'Inter', sans-serif;
+
+    /*font-weight*/
+    --fw-normal:400;
+    --fw-medium:500;
+    --fw-bold:700;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+
+}
+
+html{
+    font-size: 62.5%;
+    font-family: var(--ff-primary);
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+img{
+    width: 100%;
+}
+
+section{
+    padding: 3rem 0 2rem;
+}
+
+::selection{
+    color: var(--bg-color);
+    background: var(--second-color);
+}
+
+/* Header */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 200;
+}
+
+.container{
+    max-width: 1068px;
+    margin: auto;
+    width: 100%;
+}
+
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+}
+
+    .logo{
+        color: var(--bg-color);
+        font-size: 2.2rem;
+        font-weight: var(--fw-bold);
+    }
+
+        .logo span{
+            color: var(--second-color);
+        }
+
+    .login{
+        text-transform: uppercase;
+        color: var(--bg-color);
+        font-size: 1.6rem;
+        font-weight: var(--fw-medium);
+        background: var(--second-color);
+        padding: 8px 14px;
+        border-radius: 4px;
+    }
+
+    .login:hover{
+        background: hsl(24, 98%, 58%);
+        transition: .5s;
+    }
+
+.home{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 440px;
+    background: var(--container-color);
+    text-align: center;
+}
+
+    .home .home-title{
+        font-size: 4.8rem;
+        font-weight: var(--fw-bold);
+        color: var(--bg-color);
+        margin-bottom: 12px;
+    }
+
+    .home .home-subtitle{
+        font-size: 2.2rem;
+        color: var(--bg-color);
+    }
+
+/* Post-filter */
+
+.post-filter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+    .filter-item{
+        font-size: 1.5rem;
+        font-weight: var(--fw-bold);
+        cursor:pointer;
+    }
+
+        .active-filter{
+            color: var(--bg-color);
+            background: var(--second-color);
+            padding: 4px 10px;
+            border-radius: 4px;
+        }   
