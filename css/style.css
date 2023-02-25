@@ -68,6 +68,16 @@ header{
     z-index: 200;
 }
 
+header.sticky{
+    background: #fff;
+    transition:0.5s;
+    box-shadow: 0 1px 4px hsl(0 4% 14% / 10%);
+}
+
+header.sticky .logo{
+    color: var(--container-color);
+}
+
 .container{
     max-width: 1068px;
     margin: auto;
@@ -229,3 +239,8 @@ header{
                 object-position: center;
                 border: 2px solid var(--second-color);
             }
+
+            .profile .profile-name{
+                font-size: 1rem;
+                font-weight: var(--fw-medium);
+            } 
